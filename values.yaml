@@ -1,0 +1,30 @@
+datadog:
+  clusterName: <CLUSTER-NAME>
+  apiKeyExistingSecret: datadog-keys
+  site: datadoghq.com
+  apm:
+    portEnabled: true
+  logs:
+    enabled: true
+    containerCollectAll: true
+  processAgent:
+    processCollection: true
+  dogstatsd:
+    useHostPort: true
+  kubelet:
+    tlsVerify: false
+  networkMonitoring:
+    enabled: true
+  securityAgent:
+    compliance:
+      enabled: true
+    runtime:
+      enabled: true
+agents:
+  tolerations:
+    - key: node-role.kubernetes.io/control-plane
+      operator: Exists
+      effect: NoSchedule
+    - key: node-role.kubernetes.io/master
+      operator: Exists
+      effect: NoSchedule
