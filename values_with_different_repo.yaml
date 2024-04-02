@@ -1,4 +1,4 @@
-registry: <your repo location>>
+registry: <your repo location for datadog agent>>
 datadog:
   clusterName: <CLUSTER-NAME>
   apiKeyExistingSecret: datadog-keys
@@ -40,4 +40,4 @@ clusterAgent:
 
   env:
     - name: DD_ADMISSION_CONTROLLER_AUTO_INSTRUMENTATION_CONTAINER_REGISTRY
-      value: <<your repo location>>
+      value: <<your repo location for the ruby tracer>>
