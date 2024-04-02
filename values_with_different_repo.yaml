@@ -1,0 +1,4 @@
+clusterAgent:
+  env:
+    - name: DD_ADMISSION_CONTROLLER_AUTO_INSTRUMENTATION_CONTAINER_REGISTRY
+      value: public.ecr.aws/datadog
