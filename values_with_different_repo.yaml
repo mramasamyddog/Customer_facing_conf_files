@@ -8,8 +8,8 @@ datadog:
   logs:
     enabled: true
     containerCollectAll: true
-  #processAgent:
-  #  processCollection: true
+  processAgent:
+    processCollection: false
   dogstatsd:
     useHostPort: true
   kubelet:
