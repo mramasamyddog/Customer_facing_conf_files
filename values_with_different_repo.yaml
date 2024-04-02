@@ -1,4 +1,21 @@
+datadog:
+  clusterName: <CLUSTER-NAME>
+  apiKeyExistingSecret: datadog-keys
+  site: datadoghq.com
+  apm:
+    portEnabled: true
+  logs:
+    enabled: true
+    containerCollectAll: true
+  processAgent:
+    processCollection: true
+  dogstatsd:
+    useHostPort: true
+  kubelet:
+    tlsVerify: false
+  networkMonitoring:
+    enabled: true
 clusterAgent:
   env:
     - name: DD_ADMISSION_CONTROLLER_AUTO_INSTRUMENTATION_CONTAINER_REGISTRY
-      value: public.ecr.aws/datadog
+      value: <<your repo location>>
