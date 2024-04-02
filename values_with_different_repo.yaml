@@ -1,4 +1,4 @@
-registry: <your repo location for datadog agent>>
+#registry: <your repo location for datadog agent>>
 datadog:
   clusterName: <CLUSTER-NAME>
   apiKeyExistingSecret: datadog-keys
